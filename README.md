@@ -1,20 +1,18 @@
 ## how to deploy to cloudflare workers (workers.dev)
 
+**See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.**
+
+### Quick Deploy:
+
 1. fork repo
-2. log in to cloudflare
-3. install wrangler CLI if you don't have it: `npm i -g wrangler`
-4. authenticate wrangler: `wrangler login`
-5. set your API key as a secret: `wrangler secret put API_KEY`
-6. deploy with assets: `wrangler deploy --assets ./`
+2. install wrangler: `npm i -g wrangler`
+3. authenticate: `wrangler login`
+4. set API key: `wrangler secret put API_KEY`
+5. deploy: `wrangler deploy --assets ./`
 
 ### alternative: deploy through dashboard
 
-1. go to Workers & Pages in Cloudflare dashboard
-2. click "Create Application" → "Create Worker"
-3. upload the worker.js file
-4. configure environment variables in Settings:
-   - Add secret `API_KEY` with your zimage API key
-5. you'll need to upload static assets separately or use the CLI method above
+For dashboard deployment (static assets must be deployed via CLI), see [DEPLOYMENT.md](DEPLOYMENT.md) for instructions.
 
 ---
 
