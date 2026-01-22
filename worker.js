@@ -3,6 +3,9 @@
  * Handles API routes and serves static files using Workers Assets
  */
 
+// Configuration constants
+const IMAGE_GENERATION_TIMEOUT_MS = 120000; // 2 minutes
+
 /**
  * Handle image generation API endpoint
  */
@@ -39,7 +42,7 @@ async function handleGenerateImage(request, env) {
 
     // Fetch the image from pollinations.ai with timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minute timeout
+    const timeoutId = setTimeout(() => controller.abort(), IMAGE_GENERATION_TIMEOUT_MS);
 
     const response = await fetch(imgUrl, {
       signal: controller.signal
