@@ -1,0 +1,20 @@
+name = "workersverdis"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Assets configuration - modern Workers Assets approach
+# All files except worker.js and wrangler.toml will be served as static assets
+# The --assets flag will handle this automatically when deploying
+
+# Environment variables
+# To set secret variables, use: wrangler secret put API_KEY
+[vars]
+# Non-sensitive environment variables can go here
+
+# For development
+[env.dev]
+name = "workersverdis-dev"
+
+# For production  
+[env.production]
+name = "workersverdis"

@@ -1,0 +1,44 @@
+# Files to exclude from the assets directory when deploying
+# The worker.js and wrangler.toml are handled separately and should be excluded from assets
+
+# Build output
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.production
+KEYS.json
+
+# Version control
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Other
+.netlify/
+cherri-umami-worker/
+cherri-cometchat-worker/
+
+# Wrangler config and worker code (not assets)
+wrangler.toml
+worker.js
+.wranglerignore
+
+# Pages-specific function directory (functionality moved to worker.js)
+functions/
