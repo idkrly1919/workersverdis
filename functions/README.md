@@ -1,3 +1,15 @@
+# ⚠️ DEPRECATED - Cloudflare Pages Functions
+
+**Note**: This directory is deprecated. The project has been migrated to **Cloudflare Workers**.
+
+The functionality previously in `/functions/api/generate-image.js` has been moved to the main `worker.js` file in the root directory.
+
+For deployment instructions, see the main [DEPLOYMENT.md](../DEPLOYMENT.md) in the root directory.
+
+---
+
+## Original Documentation (for reference)
+
 # Cloudflare Pages Functions
 
 This directory contains serverless functions for the verdis.pages.dev site.

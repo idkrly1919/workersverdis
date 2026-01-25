@@ -1,0 +1,49 @@
+# Wrangler ignore file
+# Excludes files/directories from static assets upload
+
+# Version control
+.git
+.gitignore
+
+# Dependencies
+node_modules
+
+# Build artifacts
+dist
+.astro
+
+# Environment and secrets
+.env
+.env.production
+KEYS.json
+
+# IDE
+.vscode
+.idea
+.DS_Store
+
+# Deployment artifacts
+.wrangler
+.netlify
+
+# Configuration files (not needed as static assets)
+wrangler.toml
+worker.js
+.wranglerignore
+
+# Documentation (optional - can be included if desired)
+DEPLOYMENT.md
+
+# Pages-specific (deprecated)
+functions
+
+# Scripts (build-time only)
+scripts
+
+# Unused directories
+cherri-umami-worker
+cherri-cometchat-worker
+
+# Backup files
+*.backup
+*.old
